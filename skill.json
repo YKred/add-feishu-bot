@@ -1,0 +1,42 @@
+{
+  "name": "add-bot",
+  "version": "3.0.0",
+  "description": "【安全增强版】引导式自动添加飞书机器人，仅支持新增，禁止修改/删除已有配置",
+  "author": "虾老大团队",
+  "main": "index.js",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "botName": {
+        "type": "string",
+        "description": "【必填1】机器人名字，比如：客服小虾4、技术支持虾",
+        "required": true
+      },
+      "appId": {
+        "type": "string",
+        "description": "【必填2】飞书App ID，飞书开放平台获取的cli_开头的字符串",
+        "required": true
+      },
+      "appSecret": {
+        "type": "string",
+        "description": "【必填3】飞书App Secret，和App ID配套的密钥",
+        "required": true
+      },
+      "model": {
+        "type": "string",
+        "description": "【选填4】机器人用的模型，不填默认用豆包通用版",
+        "default": "ark/doubao-seed-2.0-pro"
+      },
+      "theme": {
+        "type": "string",
+        "description": "【选填5】机器人人设描述，不填用默认",
+        "default": "我是专业的机器人，为你提供专属服务。"
+      },
+      "emoji": {
+        "type": "string",
+        "description": "【选填6】机器人头像表情，不填默认用🤖",
+        "default": "🤖"
+      }
+    }
+  }
+}
